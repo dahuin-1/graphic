@@ -28,7 +28,7 @@ public class GDrawingPanel extends JPanel {
     private MouseHandler mouseHandler;
     private Vector<GShape> shapeVector;
     private GTransformer transformer;
-  //private DeepClone deepClone;
+    //private DeepClone deepClone;
 
     //associations components
     private GShape currentShape;
@@ -36,7 +36,7 @@ public class GDrawingPanel extends JPanel {
 
     //working variables
     private GShape selectedShape;
-   // private GShape copyshape;
+    private GShape copyshape;
 
     //constructors and initializers
     public GDrawingPanel() {
@@ -45,20 +45,19 @@ public class GDrawingPanel extends JPanel {
         this.setForeground(Color.black);
         this.eDrawingState = EDrawingState.eIdle;
 
-        this.lineColor = null;
-        this.fillColor = null;
-        this.Updated = false;
-        this.bDrawing = true;
-        this.transformer = null;
 
         //components
         this.mouseHandler = new MouseHandler();
         this.addMouseMotionListener(this.mouseHandler); //버튼이벤트
         this.addMouseListener(this.mouseHandler); //마우스의 움직임을 인지하는 이벤트
-
         this.shapeVector = new Vector<GShape>();
 
         //working variables
+        this.lineColor = null;
+        this.fillColor = null;
+        this.Updated = false;
+        this.bDrawing = true;
+        this.transformer = null;
         this.currentTool = null;
         this.currentShape = null;
     }
@@ -69,7 +68,6 @@ public class GDrawingPanel extends JPanel {
     }
 
     //setter & getter
-
     public Vector<GShape> getShapeVector() {
         return this.shapeVector;
     }
@@ -110,6 +108,8 @@ public class GDrawingPanel extends JPanel {
 
     public void paint(Graphics g) {
         super.paint(g);
+        Graphics2D g2D = (Graphics2D) g;
+        g2D.setXORMode(this.getBackground());
         for (GShape shape : this.shapeVector) {
             shape.draw(g);
         }

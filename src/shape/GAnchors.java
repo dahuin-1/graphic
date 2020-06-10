@@ -90,7 +90,7 @@ public class GAnchors implements Serializable {
         }
     }
 
-
+    //나중에 선택된 앵커를 저장해놔야 한다.
     public EAnchors contains(int x, int y) {
         for(int i=0; i<EAnchors.values().length-1; i++){
             if(this.anchors.get(i).contains(x,y)) {

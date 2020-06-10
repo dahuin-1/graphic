@@ -1,6 +1,7 @@
 package shape;
 import java.awt.Graphics2D;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.security.cert.PolicyNode;
@@ -8,17 +9,16 @@ import java.security.cert.PolicyNode;
 public abstract class GShape implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    protected GAnchors.EAnchors eSelectedAnchor;
 
     private int tMoveX, tMoveY;
 
     protected Graphics2D graphics2D;
     protected Shape shape;
     protected GAnchors anchors;
-    //private GAnchors anchors;
     protected Color lineColor, fillColor;
-    private GAnchors.EAnchors eSelectedAnchor;
+   // private GAnchors.EAnchors eSelectedAnchor;
 
-   // public abstract void continueTransforming(int x, int y);
 
     public enum EDrawingStyle{
         e2Points, eNPoints
@@ -32,6 +32,8 @@ public abstract class GShape implements Serializable {
         this.lineColor = null;
         this.fillColor = null;
     }
+
+
     public EDrawingStyle getEDrawingStyle() {
         return this.eDrawingStyle;
     }
@@ -79,7 +81,7 @@ public abstract class GShape implements Serializable {
         return null;
     }
 
-  //  abstract public GShape newInstance();
+    //  abstract public GShape newInstance();
 
 
     public boolean contains (int x, int y){
@@ -104,7 +106,7 @@ public abstract class GShape implements Serializable {
     }
 
     public void initTransforming(int x, int y) {
-      // Graphics2D graphics2D = Graphics2D;
+        // Graphics2D graphics2D = Graphics2D;
         this.tMoveX = x;
         this.tMoveY = y;
 //        if(this.bSelected) {
@@ -121,14 +123,19 @@ public abstract class GShape implements Serializable {
     }
 
     public void finishTransforming(int x, int y) {
+        this.tMoveX = x;
+        this.tMoveY = y;
     }
-
-
+    public void move(int dx, int dy) {
+        AffineTransform at = new AffineTransform();
+        at.translate(dx,dy);
+        this.shape = at.createTransformedShape(this.shape);
+    }
 
     public boolean isSelected() {return bSelected;}
     public Shape getShape() {return shape;}
-
-    public abstract void move(int dx, int dy);
+    public void setShape(Shape shape) {this.shape = shape;}
+   // public abstract void move(int dx, int dy);
 
     public abstract void setOrigin(int x, int y);
     public abstract void setPoint(int x, int y);

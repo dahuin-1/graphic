@@ -8,3 +8,4 @@ public class GResizer extends GTransformer {
         super(shape);
     }
 }
+

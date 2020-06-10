@@ -36,11 +36,11 @@ public class GPolygon extends GShape implements Cloneable {
         polygon.addPoint(x,y);
     }
 
-    @Override
-    public void move(int dx, int dy) {
-        Polygon polygon = (Polygon)this.shape;
-        polygon.translate(dx,dy);
-    }
+//    @Override
+//    public void move(int dx, int dy) {
+//        Polygon polygon = (Polygon)this.shape;
+//        polygon.translate(dx,dy);
+//    }
 
 
 }

@@ -6,21 +6,27 @@ public class GLine extends GShape implements Cloneable{
 
     private static final long serialVersionUID = 1L;
 
+    private Line2D.Float line;
+
     public GLine() {
         this.eDrawingStyle = EDrawingStyle.e2Points;
-        this.shape = new Line2D.Float();
+        this.line = new Line2D.Float();
+        this.shape = this.line;
     }
 
+    @Override
     public boolean contains(int x, int y) {
+        Line2D line = (Line2D) this.shape;
+        //Line2D.Float line = (Line2D.Float)this.shape;
         boolean bContains = false;
-        GAnchors.EAnchors eSelectedAnchor = null;
+        this.eSelectedAnchor = null;
         if(this.bSelected){
-            eSelectedAnchor = this.anchors.contains(x,y);
+            this.eSelectedAnchor = this.anchors.contains(x,y);
         }
-        if(eSelectedAnchor == null) {
-            Line2D line = (Line2D) this.shape;
+        if(this.eSelectedAnchor == null) {
+          //  Line2D line = (Line2D) this.shape;
             if (line.ptSegDist(x, y) < 5) {
-                eSelectedAnchor = GAnchors.EAnchors.MM;
+                this.eSelectedAnchor = GAnchors.EAnchors.MM;
                 bContains = true;
             }
         } else {
@@ -31,14 +37,14 @@ public class GLine extends GShape implements Cloneable{
 
     @Override
     public void setOrigin(int x, int y) {
-        Line2D line = (Line2D)this.shape;
-        line.setLine(x, y, x, y);
+       // Line2D line = (Line2D)this.shape;
+        this.line.setLine(x, y, x, y);
     }
 
     @Override
     public void setPoint(int x, int y) {
-        Line2D line = (Line2D)this.shape;
-        line.setLine(line.getX1(), line.getY1(), x, y);
+       // Line2D line = (Line2D)this.shape;
+        this.line.setLine(line.getX1(), line.getY1(), x, y);
     }
 
     @Override
@@ -47,12 +53,12 @@ public class GLine extends GShape implements Cloneable{
 
 
 
-    @Override
-    public void move(int dx, int dy) {
-        Line2D line = (Line2D)this.shape;
-        line.setLine(dx+line.getX1(),dy+line.getY1(),line.getX2()+dx,line.getY2()+dy);
-
-    }
+//    @Override
+//    public void move(int dx, int dy) {
+//        Line2D line = (Line2D)this.shape;
+//        line.setLine(dx+line.getX1(),dy+line.getY1(),line.getX2()+dx,line.getY2()+dy);
+//
+//    }
 
 
 }

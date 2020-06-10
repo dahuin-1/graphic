@@ -24,7 +24,6 @@ public class GConstants {
 
 
     public GConstants() {
-
     }
 
     public enum EMainFrame{
@@ -58,7 +57,8 @@ public class GConstants {
         eRectangle("rectangle", new GRectangle()),
         eOval("oval", new GOval()),
         eLine("line", new GLine()),
-        ePolygon("polygon", new GPolygon())
+        ePolygon("polygon", new GPolygon()),
+        eSelect("select",new GGroup())
         ;
 
         private String title;
@@ -74,8 +74,6 @@ public class GConstants {
         public GShape getActionCommand() {
             return this.actionCommand;
         }
-
-
     }
 
 
@@ -180,11 +178,6 @@ public class GConstants {
     public static final int RR_OFFSET = 40;
     public static final Color ANCHOR_LINECOLOR = Color.BLACK ;
     public static final Color ANCHOR_FILLCOLOR = Color.WHITE ;
-    public enum EAnchorTypes {NW , NN , NE , WW, EE , SW , SS , SE , RR , NONE }
-
-
-
-
 
 
 }

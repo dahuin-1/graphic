@@ -31,13 +31,13 @@ public class GOval extends GShape implements Cloneable {
 
     }
 
-    @Override
-    public void move(int dx, int dy) {
-        Ellipse2D ellipse = (Ellipse2D)this.shape;
-        ellipse.setFrame(ellipse.getX()+dx, ellipse.getY()+dy,
-                ellipse.getWidth(),ellipse.getHeight());
-
-    }
+//    @Override
+//    public void move(int dx, int dy) {
+//        Ellipse2D ellipse = (Ellipse2D)this.shape;
+//        ellipse.setFrame(ellipse.getX()+dx, ellipse.getY()+dy,
+//                ellipse.getWidth(),ellipse.getHeight());
+//
+//    }
 
 
 
