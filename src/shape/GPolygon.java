@@ -3,6 +3,7 @@ package shape;
 import global.GConstants;
 
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 
 public class GPolygon extends GShape implements Cloneable {
 
@@ -14,6 +15,16 @@ public class GPolygon extends GShape implements Cloneable {
     public GPolygon() {
         this.eDrawingStyle = EDrawingStyle.eNPoints;
         this.shape = new Polygon();
+    }
+
+    @Override
+    public GShape deepCopy() {
+        AffineTransform affineTransform = new AffineTransform();
+        Shape newShape = affineTransform.createTransformedShape(shape);
+        GOval shape = new GOval();
+        shape.setShape(newShape);
+        shape.setGraphicsAttributes(this);
+        return shape;
     }
 
     @Override

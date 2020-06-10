@@ -16,6 +16,16 @@ public class GRectangle extends GShape implements Cloneable{
     }
 
     @Override
+    public GShape deepCopy() {
+            AffineTransform affineTransform = new AffineTransform();
+            Shape newShape = affineTransform.createTransformedShape(shape);
+            GOval shape = new GOval();
+            shape.setShape(newShape);
+            shape.setGraphicsAttributes(this);
+            return shape;
+        }
+
+    @Override
     public void setOrigin(int x, int y) {
       //   this.rectangle.setBounds(x, y, 0, 0);
         Rectangle rectangle = (Rectangle)this.shape;

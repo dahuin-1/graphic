@@ -7,6 +7,11 @@ import java.awt.*;
 public class GMover extends GTransformer {
     public GMover(GShape shape) {
         super(shape);
+        previousP = new Point();
+    }
+    
+    public void init(Point p){
+        previousP = p;
     }
 
     public void initTransforming(Graphics2D g2D, int x, int y) {

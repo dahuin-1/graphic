@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
-import java.security.cert.PolicyNode;
+
 
 public abstract class GShape implements Serializable {
 
@@ -17,7 +17,14 @@ public abstract class GShape implements Serializable {
     protected Shape shape;
     protected GAnchors anchors;
     protected Color lineColor, fillColor;
-   // private GAnchors.EAnchors eSelectedAnchor;
+
+    public Object clone(GShape currentShape) {
+        return null;
+    }
+
+  //  public abstract void addShape(GShape shape);
+
+ //   public abstract GShape[] getChildShape();
 
 
     public enum EDrawingStyle{
@@ -27,12 +34,42 @@ public abstract class GShape implements Serializable {
     protected EDrawingStyle eDrawingStyle;
 
     public GShape() {
+        this.shape = shape;
         this.bSelected = false;
         this.anchors = new GAnchors();
         this.lineColor = null;
         this.fillColor = null;
     }
 
+    public void setGraphicsAttributes(GShape shape) {
+        setLineColor(shape.getLineColor());
+        setFillColor(shape.getFillColor());
+        setAnchorList(shape.getAnchorList());
+        setAnchorList(shape.getAnchorList());
+        setSelected(shape.isSelected());
+    }
+
+    public void setShape(Shape shape){
+       this.shape = shape;
+    }
+    public void setLineColor(Color lineColor){
+        this.lineColor = lineColor;
+    }
+    public Color getLineColor() {
+        return lineColor;
+    }
+    public void setFillColor(Color fillColor){
+        this.fillColor = fillColor;
+    }
+    public Color getFillColor() {
+        return fillColor;
+    }
+    public GAnchors getAnchorList(){
+        return anchors;
+    }
+    public void setAnchorList(GAnchors anchors){
+        this.anchors = anchors;
+    }
 
     public EDrawingStyle getEDrawingStyle() {
         return this.eDrawingStyle;
@@ -59,16 +96,11 @@ public abstract class GShape implements Serializable {
             graphics2D.draw(this.shape);
         }
         if(this.bSelected) {
+            this.anchors.setBounds(this.getBounds());
             this.anchors.draw(graphics2D);
         }
     }
 
-    public void setLineColor(Color lineColor) {
-        this.lineColor = lineColor;
-    }
-    public void setFillColor(Color fillColor) {
-        this.fillColor = fillColor;
-    }
 
     public GShape clone() {
         try{
@@ -106,13 +138,8 @@ public abstract class GShape implements Serializable {
     }
 
     public void initTransforming(int x, int y) {
-        // Graphics2D graphics2D = Graphics2D;
         this.tMoveX = x;
         this.tMoveY = y;
-//        if(this.bSelected) {
-//            this.anchors.setBounds(this.shape.getBounds());
-//            this.anchors.draw(graphics2D);
-//        }
 
     }
 
@@ -134,8 +161,7 @@ public abstract class GShape implements Serializable {
 
     public boolean isSelected() {return bSelected;}
     public Shape getShape() {return shape;}
-    public void setShape(Shape shape) {this.shape = shape;}
-   // public abstract void move(int dx, int dy);
+    public abstract GShape deepCopy();
 
     public abstract void setOrigin(int x, int y);
     public abstract void setPoint(int x, int y);

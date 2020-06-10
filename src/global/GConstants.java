@@ -11,14 +11,7 @@ import java.awt.*;
 public class GConstants {
 
 
-    public static final Color COLOR_LINE_DEFAULT = Color.BLACK ;
-    public final static Color COLOR_FILL_DEFAULT = Color.WHITE ;
-    public static final Color FOREGROUND_COLOR = Color.BLACK ;
-    public static final Color BACKGROUND_COLOR = Color.WHITE ;
-    public static final String FILLCOLOR_TITLE = "Selected Fill Color";
-    public static final String LINECOLOR_TITLE = "Selected Line Color";
-    public static final String SAVE_TITLE = "종료 전 저장하시겠습니까?";
-    public static final String EXIT_TITLE = "정말 프로그램을 종료하시겠습니까?";
+
 
     public static long serialVersionUID = 1L;
 
@@ -58,7 +51,7 @@ public class GConstants {
         eOval("oval", new GOval()),
         eLine("line", new GLine()),
         ePolygon("polygon", new GPolygon()),
-        eSelect("select",new GGroup())
+       // eSelect("select", new GGroup())
         ;
 
         private String title;
@@ -112,18 +105,16 @@ public class GConstants {
         ;
 
         private String title;
-        private String tool;
+        private String actionCommand;
 
-        private	EEditMenu(String title, String tool){
+        private	EEditMenu(String title, String actionCommand){
             this.title = title;
-            this.tool = tool;
+            this.actionCommand = actionCommand;
         }
         public String getTitle() {
             return this.title;
         }
-        public String getTool() {
-            return this.tool;
-        }
+        public String getActionCommand() { return this.actionCommand; }
     }
 
     public enum EColorMenu {
@@ -173,11 +164,20 @@ public class GConstants {
             return this.cursor;
         }
     }
-    public static final int ANCHOR_W = 6;
-    public static final int ANCHOR_H = 6;
-    public static final int RR_OFFSET = 40;
+      public static final int ANCHOR_W = 6;
+     public static final int ANCHOR_H = 6;
+      public static final int RR_OFFSET = 40;
     public static final Color ANCHOR_LINECOLOR = Color.BLACK ;
     public static final Color ANCHOR_FILLCOLOR = Color.WHITE ;
-
+        public static final Color COLOR_LINE_DEFAULT = Color.BLACK ;
+        public final static Color COLOR_FILL_DEFAULT = Color.WHITE ;
+        public static final Color FOREGROUND_COLOR = Color.BLACK ;
+        public static final Color BACKGROUND_COLOR = Color.WHITE ;
+        public static final String FILLCOLOR_TITLE = "Selected Fill Color";
+        public static final String LINECOLOR_TITLE = "Selected Line Color";
+        public static final String SAVE_TITLE = "종료 전 저장하시겠습니까?";
+        public static final String EXIT_TITLE = "정말 프로그램을 종료하시겠습니까?";
+        public final static int DEFAULT_DASH_OFFSET = 4;
+        public final static int DEFAULT_DASHEDLINE_WIDTH = 1;
 
 }

@@ -7,6 +7,8 @@ import java.awt.*;
 public class GTransformer {
 
     protected GShape shape;
+    protected Point previousP;
+
     public GTransformer(GShape shape){
         this.shape = shape;
     }

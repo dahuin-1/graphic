@@ -55,7 +55,7 @@ public class GMainFrame extends JFrame {
 
     public class WindowActionHandler extends WindowAdapter {
         public void windowClosing(WindowEvent e){
-            System.out.println("windowClosing");
+           // System.out.println("windowClosing");
             menuBar.getFileMenu().checkSave();
         }
 

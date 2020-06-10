@@ -1,7 +1,9 @@
 package panel;
 
 import global.GConstants;
+import menu.DeepClone;
 import shape.GAnchors;
+
 import shape.GShape;
 import transformer.*;
 
@@ -10,11 +12,13 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class GDrawingPanel extends JPanel {
 
     private static final long serialVersionUID = 1L;
+
 
     private enum EDrawingState {
         eIdle, eDrawing, eTransforming
@@ -23,10 +27,12 @@ public class GDrawingPanel extends JPanel {
     private Color lineColor, fillColor;
     private boolean Updated;
     private boolean bDrawing;
+    private DeepClone deepClone;
 
     //components
     private MouseHandler mouseHandler;
     private Vector<GShape> shapeVector;
+    private GBoard board;
     private GTransformer transformer;
     //private DeepClone deepClone;
 
@@ -51,6 +57,7 @@ public class GDrawingPanel extends JPanel {
         this.addMouseMotionListener(this.mouseHandler); //버튼이벤트
         this.addMouseListener(this.mouseHandler); //마우스의 움직임을 인지하는 이벤트
         this.shapeVector = new Vector<GShape>();
+        this.deepClone = new DeepClone();
 
         //working variables
         this.lineColor = null;
@@ -96,11 +103,33 @@ public class GDrawingPanel extends JPanel {
 
     //setter & getter
     public void setLineColor(Color lineColor) {
+        if (selectedSetColor(true, lineColor)) {
+            return;
+        }
         this.lineColor = lineColor;
     }
     public void setFillColor(Color fillColor) {
+        if (selectedSetColor(false, fillColor)) {
+            return;
+        }
         this.fillColor = fillColor;
     }
+    private boolean selectedSetColor(boolean flag, Color color) {
+        boolean returnValue = false;
+        for(GShape shape: shapeVector){
+            if (shape.isSelected()) {
+                if (flag) {
+                    shape.setLineColor(color);
+                } else {
+                    shape.setFillColor(color);
+                }
+                returnValue = true;
+            }
+        }
+        repaint();
+        return returnValue;
+    }
+
 
     public void setCurrentShape(GShape currentShape) {
         this.currentShape = currentShape;
@@ -225,6 +254,74 @@ public class GDrawingPanel extends JPanel {
         this.transformer.continueTransforming(g2D,x,y);
     }
 
+    public ArrayList<GShape> copy() {
+        System.out.println("copy");
+        ArrayList<GShape> returnList = new ArrayList<GShape>();
+        for(GShape shape: shapeVector){
+            if(shape.isSelected()){
+                returnList.add(shape.deepCopy());
+            }
+        }
+        return returnList;
+        //this.copyshape = (GShape)this.deepClone.clone(this.currentShape);
+    }
+
+    public ArrayList<GShape> cut(){
+        ArrayList<GShape> returnList = new ArrayList<GShape>();
+        for (int i = this.shapeVector.size(); i > 0; i--) {
+            GShape shape = this.shapeVector.get(i - 1);
+            if (shape.isSelected()) {
+                returnList.add(0,shape.deepCopy());
+                this.shapeVector.remove(shape);
+            }
+        }
+        this.repaint();
+        return returnList;
+    }
+
+
+    public void paste(ArrayList<GShape> shapes) {
+        System.out.println("paste");
+        for(GShape shape: shapes){
+            this.shapeVector.add(shape.deepCopy());
+        }
+        this.repaint();
+    }
+  /*  public void group(GGroup group) {
+        boolean check = false;
+        for (int i = shapeVector.size(); i > 0; i--) {
+            GShape shape = shapeVector.get(i - 1);
+            if(shape.isSelected()){
+                shape.setSelected(false);
+                group.addShape(shape);
+                shapeVector.remove(shape);
+                check = true;
+            }
+        }
+        if(check){
+            group.setSelected(true);
+            shapeVector.add(group);
+        }
+        repaint();
+    }*/
+
+   /* public void ungroup() {
+        ArrayList<GShape> tempList = new ArrayList<GShape>();
+        for (int i = shapeVector.size(); i > 0; i--) {
+            GShape shape = shapeVector.get(i - 1);
+            if(shape instanceof GGroup && shape.isSelected()){
+                for(GShape childShape: ((GGroup)shape).getChildList()){
+
+                    childShape.setSelected(true);
+                    tempList.add(childShape);
+                }
+                shapeVector.remove(shape);
+            }
+        }
+        shapeVector.addAll(tempList);
+        repaint();
+    }
+*/
 
 
     // inner class

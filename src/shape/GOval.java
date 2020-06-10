@@ -1,5 +1,7 @@
 package shape;
 
+import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 
 public class GOval extends GShape implements Cloneable {
@@ -10,6 +12,16 @@ public class GOval extends GShape implements Cloneable {
         this.eDrawingStyle = EDrawingStyle.e2Points;
         this.shape = new Ellipse2D.Float();
 
+    }
+
+    @Override
+    public GShape deepCopy() {
+        AffineTransform affineTransform = new AffineTransform();
+        Shape newShape = affineTransform.createTransformedShape(shape);
+        GOval shape = new GOval();
+        shape.setShape(newShape);
+        shape.setGraphicsAttributes(this);
+        return shape;
     }
 
     @Override
