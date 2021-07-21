@@ -70,7 +70,7 @@ public class GConstants {
         enew("New", "nnew"),
         eopen("열기", "open"),
         esave("저장", "save"),
-        esaveAs("다른이름으로", "saveAs"),
+        esaveAs("다른이름으로 저장", "saveAs"),
         eexit("닫기", "exit"),
         ;
 
