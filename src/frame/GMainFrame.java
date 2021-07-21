@@ -53,7 +53,7 @@ public class GMainFrame extends JFrame {
         this.drawingPanel.initialize();
     }
 
-    public class WindowActionHandler extends WindowAdapter {
+   public class WindowActionHandler extends WindowAdapter {
         public void windowClosing(WindowEvent e){
            // System.out.println("windowClosing");
             menuBar.getFileMenu().checkSave();

@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bc0189e-961d-4473-9e18-bd9c65f123ea" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="3bc0189e-961d-4473-9e18-bd9c65f123ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/META-INF/temp.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EColorMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EColorMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$ECursor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$ECursor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EEditMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EEditMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EFileMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EFileMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EMainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EMainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EMenubar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EMenubar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EToolbar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EToolbar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/menu/GFileMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/menu/GFileMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/menu/GMenu$ActionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/menu/GMenu$ActionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/menu/GMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/menu/GMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/panel/GDrawingPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/panel/GDrawingPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/panel/GDrawingPanel$MouseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/panel/GDrawingPanel$MouseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/panel/GDrawingPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/panel/GDrawingPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/shape/GPolygon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/toolbar/GToolBar$ActionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/toolbar/GToolBar$ActionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/toolbar/GToolBar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/toolbar/GToolBar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frame/GMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frame/GMainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global/GConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/global/GConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/GFileMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/GFileMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/menu/GMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/GMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panel/GDrawingPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/panel/GDrawingPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shape/GPolygon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/toolbar/GToolBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolbar/GToolBar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +44,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1ciF0zxAaM2gpqOdxbyd0sPMkth" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -32,18 +72,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\김다흰\IdeaProjects\temp\src" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="GMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -59,12 +87,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GMain" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -84,23 +126,24 @@
       <workItem from="1591612571305" duration="10021000" />
       <workItem from="1591715511646" duration="4922000" />
       <workItem from="1591777023747" duration="11532000" />
+      <workItem from="1626799804780" duration="2961000" />
+      <workItem from="1626830313636" duration="309000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

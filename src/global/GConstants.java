@@ -10,9 +10,6 @@ import java.awt.*;
 
 public class GConstants {
 
-
-
-
     public static long serialVersionUID = 1L;
 
 
@@ -50,7 +47,6 @@ public class GConstants {
         eRectangle("rectangle", new GRectangle()),
         eOval("oval", new GOval()),
         eLine("line", new GLine()),
-        ePolygon("polygon", new GPolygon()),
        // eSelect("select", new GGroup())
         ;
 
@@ -75,7 +71,6 @@ public class GConstants {
         eopen("열기", "open"),
         esave("저장", "save"),
         esaveAs("다른이름으로", "saveAs"),
-        eprint("프린트", "print"),
         eexit("닫기", "exit"),
         ;
 
@@ -100,8 +95,6 @@ public class GConstants {
         ecut("잘라내기", "cut"),
         ecopy("복사하기", "copy"),
         epaste("붙여넣기", "paste"),
-        egroup("그룹화", "group"),
-        eungroup("그룹해제", "ungroup")
         ;
 
         private String title;

@@ -22,9 +22,6 @@ public abstract class GMenu extends JMenu {
 
         this.menuItems = new Vector<JMenuItem>();
         this.actionHandler = new ActionHandler();
-
-
-
     }
 
     public abstract void initialize();
@@ -42,7 +39,7 @@ public abstract class GMenu extends JMenu {
         }
     }
 
-    protected class ActionHandler implements ActionListener {
+  protected class ActionHandler implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent event) {

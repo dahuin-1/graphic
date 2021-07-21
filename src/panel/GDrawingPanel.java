@@ -130,6 +130,15 @@ public class GDrawingPanel extends JPanel {
         return returnValue;
     }
 
+    public void restoreShapeVector(Object shapeVector) {
+        if(shapeVector == null) {
+            this.shapeVector.clear();
+        } else {
+            this.shapeVector = (Vector<GShape>) shapeVector;
+        }
+        this.repaint();
+    }
+
 
     public void setCurrentShape(GShape currentShape) {
         this.currentShape = currentShape;
