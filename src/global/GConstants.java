@@ -16,29 +16,33 @@ public class GConstants {
     public GConstants() {
     }
 
-    public enum EMainFrame{
+    public enum EMainFrame {
         eWidth(600),
         eHeight(800);
 
         private int value;
-        private EMainFrame(int value){
+
+        private EMainFrame(int value) {
             this.value = value;
         }
+
         public int getValue() {
             return this.value;
         }
     }
 
-    public enum EMenubar{
-        eFile( new GFileMenu("파일")),
-        eEdit( new GEditMenu("편집")),
+    public enum EMenubar {
+        eFile(new GFileMenu("파일")),
+        eEdit(new GEditMenu("편집")),
         eColor(new GColorMenu("컬러"));
 
         private GMenu menu;
-        private EMenubar(GMenu menu){
+
+        private EMenubar(GMenu menu) {
             this.menu = menu;
         }
-        public GMenu getMenu(){
+
+        public GMenu getMenu() {
             return this.menu;
         }
     }
@@ -47,7 +51,7 @@ public class GConstants {
         eRectangle("rectangle", new GRectangle()),
         eOval("oval", new GOval()),
         eLine("line", new GLine()),
-       // eSelect("select", new GGroup())
+        // eSelect("select", new GGroup())
         ;
 
         private String title;
@@ -57,9 +61,11 @@ public class GConstants {
             this.title = title;
             this.actionCommand = actionCommand;
         }
-        public String getTitle(){
+
+        public String getTitle() {
             return this.title;
         }
+
         public GShape getActionCommand() {
             return this.actionCommand;
         }
@@ -77,13 +83,15 @@ public class GConstants {
         private String title;
         private String actionCommand;
 
-        private	EFileMenu(String title, String actionCommand){
+        private EFileMenu(String title, String actionCommand) {
             this.title = title;
             this.actionCommand = actionCommand;
         }
+
         public String getTitle() {
             return this.title;
         }
+
         public String getActionCommand() {
             return this.actionCommand;
         }
@@ -100,14 +108,18 @@ public class GConstants {
         private String title;
         private String actionCommand;
 
-        private	EEditMenu(String title, String actionCommand){
+        private EEditMenu(String title, String actionCommand) {
             this.title = title;
             this.actionCommand = actionCommand;
         }
+
         public String getTitle() {
             return this.title;
         }
-        public String getActionCommand() { return this.actionCommand; }
+
+        public String getActionCommand() {
+            return this.actionCommand;
+        }
     }
 
     public enum EColorMenu {
@@ -118,13 +130,15 @@ public class GConstants {
         private String title;
         private String actionCommand;
 
-        private	EColorMenu(String title, String actionCommand){
+        private EColorMenu(String title, String actionCommand) {
             this.title = title;
             this.actionCommand = actionCommand;
         }
+
         public String getTitle() {
             return this.title;
         }
+
         public String getActionCommand() {
             return this.actionCommand;
         }
@@ -157,20 +171,21 @@ public class GConstants {
             return this.cursor;
         }
     }
-      public static final int ANCHOR_W = 6;
-     public static final int ANCHOR_H = 6;
-      public static final int RR_OFFSET = 40;
-    public static final Color ANCHOR_LINECOLOR = Color.BLACK ;
-    public static final Color ANCHOR_FILLCOLOR = Color.WHITE ;
-        public static final Color COLOR_LINE_DEFAULT = Color.BLACK ;
-        public final static Color COLOR_FILL_DEFAULT = Color.WHITE ;
-        public static final Color FOREGROUND_COLOR = Color.BLACK ;
-        public static final Color BACKGROUND_COLOR = Color.WHITE ;
-        public static final String FILLCOLOR_TITLE = "Selected Fill Color";
-        public static final String LINECOLOR_TITLE = "Selected Line Color";
-        public static final String SAVE_TITLE = "종료 전 저장하시겠습니까?";
-        public static final String EXIT_TITLE = "정말 프로그램을 종료하시겠습니까?";
-        public final static int DEFAULT_DASH_OFFSET = 4;
-        public final static int DEFAULT_DASHEDLINE_WIDTH = 1;
+
+    public static final int ANCHOR_W = 6;
+    public static final int ANCHOR_H = 6;
+    public static final int RR_OFFSET = 40;
+    public static final Color ANCHOR_LINECOLOR = Color.BLACK;
+    public static final Color ANCHOR_FILLCOLOR = Color.WHITE;
+    public static final Color COLOR_LINE_DEFAULT = Color.BLACK;
+    public final static Color COLOR_FILL_DEFAULT = Color.WHITE;
+    public static final Color FOREGROUND_COLOR = Color.BLACK;
+    public static final Color BACKGROUND_COLOR = Color.WHITE;
+    public static final String FILLCOLOR_TITLE = "Selected Fill Color";
+    public static final String LINECOLOR_TITLE = "Selected Line Color";
+    public static final String SAVE_TITLE = "종료 전 저장하시겠습니까?";
+    public static final String EXIT_TITLE = "정말 프로그램을 종료하시겠습니까?";
+    public final static int DEFAULT_DASH_OFFSET = 4;
+    public final static int DEFAULT_DASHEDLINE_WIDTH = 1;
 
 }
