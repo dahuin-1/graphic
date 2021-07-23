@@ -28,7 +28,6 @@ public class GEditMenu extends GMenu {
 
 
 
-
     public void initialize() {
     }
 
@@ -56,14 +55,7 @@ public class GEditMenu extends GMenu {
         this.drawingPanel.paste(copyList);
     }
 
-//    public void group() {
-//         this.drawingPanel.group(new GGroup());
-//    }
-//
-//    public void ungroup() {
-//         this.drawingPanel.ungroup();
-//
-//    }
+
 
 
 

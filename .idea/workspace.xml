@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bc0189e-961d-4473-9e18-bd9c65f123ea" name="Default Changelist" comment="" />
+    <list default="true" id="3bc0189e-961d-4473-9e18-bd9c65f123ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EColorMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EColorMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$ECursor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$ECursor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EEditMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EEditMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EFileMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EFileMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EMainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EMainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EMenubar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EMenubar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants$EToolbar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants$EToolbar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/temp/global/GConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/temp/global/GConstants.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,19 +70,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GMain" />
@@ -100,7 +97,8 @@
       <workItem from="1591715511646" duration="4922000" />
       <workItem from="1591777023747" duration="11532000" />
       <workItem from="1626799804780" duration="2961000" />
-      <workItem from="1626830313636" duration="627000" />
+      <workItem from="1626830313636" duration="1392000" />
+      <workItem from="1627043227952" duration="774000" />
     </task>
     <servers />
   </component>
