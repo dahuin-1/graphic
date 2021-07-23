@@ -39,7 +39,7 @@ public class GDrawingPanel extends JPanel {
     //associations components
     private GShape currentShape;
     private GShape currentTool;
-
+    ArrayList<GShape> redoList = new ArrayList<GShape>();
     //working variables
     private GShape selectedShape;
     private GShape copyshape;
@@ -295,6 +295,29 @@ public class GDrawingPanel extends JPanel {
             this.shapeVector.add(shape.deepCopy());
         }
         this.repaint();
+    }
+
+    public ArrayList<GShape> undo() {
+        for (int i = (shapeVector.size()-1); 0 <= i; i--) {
+            GShape shape = this.shapeVector.get(i);
+            if (shapeVector.isEmpty()== false) {
+                redoList.add(shape.deepCopy());
+                this.shapeVector.remove(shapeVector.get(i));
+                this.repaint();
+                break;
+            }
+        }
+        return redoList;
+    }
+
+    public void redo() {
+        for (int i = (redoList.size()-1); 0 <= i; i--) {
+            this.shapeVector.add(redoList.get(i));
+            redoList.remove(redoList.get(i));
+            this.repaint();
+            break;
+        }
+
     }
   /*  public void group(GGroup group) {
         boolean check = false;

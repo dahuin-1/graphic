@@ -32,23 +32,22 @@ public class GEditMenu extends GMenu {
     }
 
     public void undo() {
-
+        copyList.clear();
+        copyList.addAll(drawingPanel.undo());
     }
 
     public void redo() {
-
+        this.drawingPanel.redo();
     }
 
     public void cut() {
         copyList.clear();
         copyList.addAll(drawingPanel.cut());
-       // this.drawingPanel.cut();
     }
 
     public void copy() {
         copyList.clear();
         copyList.addAll(drawingPanel.copy());
-       // this.drawingPanel.copy();
     }
 
     public void paste() {
